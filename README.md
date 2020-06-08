@@ -1,2 +1,2 @@
 # shopping-cart-ajax
-lam carrt
+làm giỏ hàng php kết hợp ajax (realtime)
