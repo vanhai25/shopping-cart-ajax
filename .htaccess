@@ -1,0 +1,33 @@
+RewriteEngine On
+
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^gio-hang$ index.php?page=cart
+RewriteRule ^thanh-toan$ index.php?page=checkout
+
+
+
+
+RewriteRule ^([a-zA-Z0-9-]+)$ type.php?link=$1
+RewriteRule ^([a-zA-Z0-9-]+)/([0-9]+)$ type.php?link=$1&page=$2
+RewriteRule ^([a-zA-Z0-9-()]+).html$ detail.php?link=$1
+RewriteRule ^accept-order/([a-zA-Z0-9]+)$ accept-order.php?token=$1
+
+
+# RewriteRule ^/?secret.txt$ - [F,L]
+<Files "secret.txt">
+    deny from all
+</Files>
+
+
+ErrorDocument 404 /shopping0205/404.php
+ErrorDocument 403 /shopping0205/404.php
+
+# ^: bat dau 1 chuoi regular expression
+# $: ket thuc 1 chuoi regular expression
+# (): 1 chuoi regular expression
+# [a-zA-Z0-9]
+# /: \/
+# .: \.
+# +: bat buoc co it nhat 1 ki tu trong chuoi regular expression
+
+# iphone-x-64gb-gray
